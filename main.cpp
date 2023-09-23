@@ -4,18 +4,18 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[NELEMENTS]; //typo in N_ELEMENTS
-    std::cout << '1-100 ertekek duplazasa' //missing ;
-    for (int i = 0;) //missing statements
+    int *b = new int[N_ELEMENTS];						//typo in N_ELEMENTS
+    std::cout << "1-100 ertekek duplazasa" << std::endl;//missing ;
+    for (int i = 0; i < N_ELEMENTS; i++)				//missing statements
     {
-        b[i] = i * 2; //should be (i+1)
+        b[i] = (i+1) * 2;								//should be (i+1)
     }
-    for (int i = 0; i; i++) //missing statement
+    for (int i = 0; i < N_ELEMENTS; i++)				//missing statement
     {
-        std::cout << "Ertek:" //no i output
+        std::cout << "Ertek:" << b[i] <<std::endl;		//no i output
     }    
     std::cout << "Atlag szamitasa: " << std::endl;
-    int atlag; //should be float instead of int
+    float atlag;										//should be float instead of int
     for (int i = 0; i < N_ELEMENTS, i++)
     {
         atlag += b[i]
